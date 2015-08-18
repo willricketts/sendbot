@@ -6,6 +6,14 @@
  */
 
 module.exports = {
-	
+	modifyBoulderGrade: modifyBoulderGrade,
+	modifyRouteGrade: modifyRouteGrade
 };
 
+function modifyBoulderGrade(req, res) {
+
+}
+
+function modifyRouteGrade(req, res) {
+	
+}

@@ -6,6 +6,19 @@
  */
 
 module.exports = {
-	
+	register: register,
+	login: login,
+	changePassword: changePassword
 };
 
+function register(req, res) {
+
+}
+
+function login(req, res) {
+
+}
+
+function changePassword(req, res) {
+	
+}
