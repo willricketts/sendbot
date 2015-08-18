@@ -6,6 +6,14 @@
  */
 
 module.exports = {
-	
+	removeUser: removeUser,
+	modifyGrade: modifyGrade,
 };
 
+function removeUser(req, res) {
+
+}
+
+function modifyGrade(req, res) {
+	
+}
