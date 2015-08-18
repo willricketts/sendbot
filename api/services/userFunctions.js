@@ -14,7 +14,7 @@ function findUserById(id, res, err, callback) {
   });
 }
 
-function fundUsersByGrade(type, grade, res, err, callback) {
+function findUsersByGrade(type, grade, res, err, callback) {
   if(type == 'boulder') {
     User.find({ boulderGrade: grade }, function(err, users) {
       if(err) {
