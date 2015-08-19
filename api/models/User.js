@@ -9,7 +9,7 @@ module.exports = {
 
   attributes: {
     email: {
-      type: 'string'
+      type: 'string',
       unique: true
     },
 
