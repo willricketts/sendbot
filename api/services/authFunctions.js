@@ -47,5 +47,5 @@ function verifyPassword(email, prehash, callback) {
     else {
       callback(new Error('Somehow a user wasn't found));
     }
-  })
+  });
 }
