@@ -29,6 +29,23 @@ function hashPassword(prehash, callback) {
   });
 }
 
-function verifyPassword(hash, callback) {
-
+function verifyPassword(email, prehash, callback) {
+  User.findOne({ email: email }, function(err, user) {
+    if(err) {
+      callback(new Error(err));
+    }
+    else if(user) {
+      hashPassword(prehash, function(hash) {
+        if(hash == user.password) {
+          callback(true);
+        }
+        else {
+          callback(false);
+        }
+      });
+    }
+    else {
+      callback(new Error('Somehow a user wasn't found));
+    }
+  })
 }
