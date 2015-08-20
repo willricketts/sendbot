@@ -36,12 +36,14 @@ function verifyPassword(email, prehash, callback) {
     }
     else if(user) {
       hashPassword(prehash, function(hash) {
-        if(hash == user.password) {
-          callback(true);
-        }
-        else {
-          callback(false);
-        }
+        bcrypt.compare(prehash, hash, function(err, authenticated) {
+          if(err) {
+            callback(new Error(err));
+          }
+          else {
+            callback(authenticated);
+          }
+        });
       });
     }
     else {
